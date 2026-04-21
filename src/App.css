@@ -1,38 +1,212 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background-color: #0d2080;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: #ffffff;
   min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: #1a3aaa;
+  background-size: 7px 7px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 30px 20px 60px;
+  text-align: center;
+  gap: 14px;
+}
+
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+.home-btn {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background-color: transparent !important;
+  color: #aac4ff !important;
+  border: 1.5px solid #aac4ff !important;
+  padding: 6px 18px;
+  font-size: 0.9rem;
+  font-family: 'Georgia', serif;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+  min-width: unset;
+}
+
+.home-btn:hover {
+  background-color: rgba(170, 196, 255, 0.15) !important;
+}
+
+
+button {
+  background-color: #2e7d32;
+  color: #fff;
+  border: none;
+  width: 180px;     
+  height: 45px;
+  font-size: 1rem;
+  font-family: 'Georgia', serif;
+  border-radius: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  transition: background 0.2s, transform 0.1s;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover:not(:disabled) {
+  background-color: #388e3c;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:active:not(:disabled) {
+  transform: scale(0.97);
+  background-color: #1b5e20;
 }
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.input-section label {
+  font-size: 0.95rem;
+  color: #c8d8ff;
+  align-self: flex-start;
+  margin-bottom: -4px;
+}
+
+.input-section input {
+  width: 100%;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: 'Georgia', serif;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-section input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.input-section input:focus {
+  border-color: #64b5f6;
+}
+
+.mode-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #90caf9;
+  letter-spacing: 0.5px;
+}
+
+
+.score-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.score-board h3 {
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-family: 'Georgia', serif;
+}
+
+.score-board p {
+  font-size: 1rem;
+  color: #c8d8ff;
+}
+
+.score-board > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.score-board > div > p {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  color: #c8d8ff;
+  font-weight: bold;
+}
+
+
+.app > p {
+  font-size: 1rem;
+  color: #a5d6a7;
+  font-style: italic;
+}
+
+.app > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.app > div h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: 'Georgia', serif;
+}
+
+.app > div p {
+  font-size: 1.3rem;
+  color: #a5d6a7;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+}
+
+
+.fade-in {
+  animation: fadeIn 0.4s ease;
+}
+
+.slide-up {
+  animation: slideUp 0.4s ease;
+}
+
+

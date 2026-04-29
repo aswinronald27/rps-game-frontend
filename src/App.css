@@ -210,3 +210,24 @@ button:disabled {
 }
 
 
+.history-container {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.history-title {
+  margin-bottom: 10px;
+}
+
+.history-back-btn {
+  display: block;
+  margin: 10px auto;
+}
+
+.history-card {
+  margin: 8px auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}

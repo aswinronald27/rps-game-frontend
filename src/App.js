@@ -223,11 +223,11 @@ function App() {
 
   if (showHistory) {
     return (
-      <div>
-        <h2>Game History</h2>
-        <button onClick={() => dispatch({ type: "HIDE_HISTORY" })}>Back</button>
+      <div className="history-container">
+        <h2 className="history-title">Game History</h2>
+        <button className="history-back-btn" onClick={() => dispatch({ type: "HIDE_HISTORY" })}>Back</button>
         {games.map((g) => (
-          <div key={g.id}>
+          <div key={g.id} className="history-card">
             {g.player1} vs {g.player2} → {g.scoreP1} - {g.scoreP2} → {g.winner}
           </div>
         ))}
